@@ -12,6 +12,7 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | Day | Problems Solved                                                                 | Topics                      |
 |-----|----------------------------------------------------------------------------------|-----------------------------|
 | 1   | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/), [Rotate String](https://leetcode.com/problems/rotate-string/), [Kth Element in Matrix](https://www.geeksforgeeks.org/problems/kth-element-in-matrix/1) | Strings, Arrays, Matrix     |
+| 2   | [House Robber](https://leetcode.com/problems/house-robber/), [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/), [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | DP, Linked List, Trees  |
 
 ## 📌 Platforms Used
 - [LeetCode]([https://leetcode.com/](https://leetcode.com/u/Akshaykapse77/))
