@@ -15,9 +15,9 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 2   | [House Robber](https://leetcode.com/problems/house-robber/), [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/), [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | DP, Linked List, Trees  |
 
 ## 📌 Platforms Used
-- [LeetCode]([https://leetcode.com/](https://leetcode.com/u/Akshaykapse77/))
-- [GeeksforGeeks]([https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/user/akshaykdlb2/))
+- [LeetCode](https://leetcode.com/u/Akshaykapse77/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/user/akshaykdlb2/)
+- [GitHub (Solutions Repo)](https://github.com/Akshaykdlb2/50-Days-DSA-Challenge)
 
 ---
-
-**Let’s connect:** [LinkedIn]([https://www.linkedin.com/in/akshay-kapse-481209328/](https://www.linkedin.com/in/akshay-kapse-481209328/))
+**Let’s connect:** [LinkedIn](https://www.linkedin.com/in/akshay-kapse-481209328/)
