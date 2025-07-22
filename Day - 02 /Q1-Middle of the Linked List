@@ -1,0 +1,31 @@
+// 🔸 LeetCode: Middle of the Linked List  
+// 🔹 Difficulty: Easy  
+// 🔗 Link: https://leetcode.com/problems/middle-of-the-linked-list/
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+var middleNode = function(head) {
+    if(!head) return null
+    if(!head.next) return head
+
+    let temp = new ListNode(0)
+    let slow = head 
+    let fast = head
+    let prev = temp.next
+    
+    while(fast && fast.next){
+        fast = fast.next.next
+        prev = slow
+        slow = slow.next
+    }
+
+    temp = prev
+    slow = slow.next
+
+    return temp.next
+};
