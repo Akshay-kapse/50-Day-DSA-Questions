@@ -1,34 +1,28 @@
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
+// 🔸 Platform: LeetCode
+// 🔸 Problem: Palindrome Linked List
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://leetcode.com/problems/palindrome-linked-list/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 3)
+// 📅 Date: 2025-07-21
+// 🧑‍💻 Language: JavaScript
 
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
-var isPalindrome = function (head) {
-    let temp = head;
-    let arr = [];
+var isPalindrome = function(head) {
+    let slow = head, fast = head, prev, temp;
 
-    while (temp !== null) {
-        arr.push(temp.val);
-        temp = temp.next;
+    while (fast && fast.next) {
+        fast = fast.next.next;
+        temp = slow;
+        slow = slow.next;
+        temp.next = prev;
+        prev = temp;
     }
 
-    let left = 0;
-    let right = arr.length - 1;
+    if (fast) slow = slow.next;
 
-    while (left < right) {
-        if (arr[left] !== arr[right]) {
-            return false;
-        }
-        left++;
-        right--;
+    while (slow && prev && slow.val === prev.val) {
+        slow = slow.next;
+        prev = prev.next;
     }
 
-    return true;
+    return !slow;
 };
