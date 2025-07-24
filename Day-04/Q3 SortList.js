@@ -6,39 +6,24 @@
 // 📅 Date: 2025-07-21
 // 🧑‍💻 Language: JavaScript
 
-var sortList = function(head) {
-    if (!head || !head.next) return head;
+var sortList = function (head) {
+    let temp = head
+    let arr = []
 
-    const findMid = (head) => {
-        let slow = head, fast = head.next;
-        while (fast && fast.next) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    };
+    while (temp != null) {
+        arr.push(temp.val)
+        temp = temp.next
+    }
 
-    const merge = (l1, l2) => {
-        const dummy = new ListNode();
-        let current = dummy;
-        while (l1 && l2) {
-            if (l1.val < l2.val) {
-                current.next = l1;
-                l1 = l1.next;
-            } else {
-                current.next = l2;
-                l2 = l2.next;
-            }
-            current = current.next;
-        }
-        current.next = l1 || l2;
-        return dummy.next;
-    };
+    arr.sort((a, b) => a - b)
 
-    const mid = findMid(head);
-    const right = sortList(mid.next);
-    mid.next = null;
-    const left = sortList(head);
+    temp = head
+    let i = 0
+    while(temp != null || i < arr.length){
+        temp.val = arr[i]
+        temp = temp.next
+        i++
+    }
 
-    return merge(left, right);
+    return head
 };
