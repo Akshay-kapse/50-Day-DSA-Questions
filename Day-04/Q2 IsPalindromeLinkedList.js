@@ -6,23 +6,25 @@
 // 📅 Date: 2025-07-21
 // 🧑‍💻 Language: JavaScript
 
-var isPalindrome = function(head) {
-    let slow = head, fast = head, prev, temp;
+var isPalindrome = function (head) {
+    let temp = head
+    let arr = []
 
-    while (fast && fast.next) {
-        fast = fast.next.next;
-        temp = slow;
-        slow = slow.next;
-        temp.next = prev;
-        prev = temp;
+    while (temp !== null) {
+        arr.push(temp.val)
+        temp = temp.next
     }
 
-    if (fast) slow = slow.next;
+    let left = 0
+    let right = arr.length - 1
 
-    while (slow && prev && slow.val === prev.val) {
-        slow = slow.next;
-        prev = prev.next;
+    while (left < right) {
+        if (arr[left] != arr[right]) {
+            return false
+        }
+
+        left++
+        right--
     }
-
-    return !slow;
+    return true
 };
