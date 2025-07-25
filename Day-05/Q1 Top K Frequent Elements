@@ -1,0 +1,17 @@
+// 🔸 Platform: LeetCode  
+// 🔸 Problem: Top K Frequent Elements  
+// 🔹 Difficulty: Medium  
+// 🔗 Link: https://leetcode.com/problems/top-k-frequent-elements/  
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 4)  
+// 📅 Date: 2025-07-21  
+// 🧑‍💻 Language: JavaScript  
+
+var topKFrequent = function (nums, k) {
+    let map = new Map()
+    for (let num of nums) {
+        map.set(num, (map.get(num) || 0) + 1)
+    }
+
+    let sorted = [...map.entries()].sort((a, b) => b[1] - a[1])
+    return sorted.slice(0, k).map(item => item[0])
+};
