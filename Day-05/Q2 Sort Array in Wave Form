@@ -1,0 +1,23 @@
+// 🔸 Platform: GeeksforGeeks  
+// 🔸 Problem: Sort Array in Wave Form  
+// 🔹 Difficulty: Medium  
+// 🔗 Link: https://www.geeksforgeeks.org/sort-array-wave-form-2/  
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 4)  
+// 📅 Date: 2025-07-21  
+// 🧑‍💻 Language: JavaScript  
+
+class Solution {
+    sortInWave(arr) {
+        function swap(arr, x, y) {
+            let temp = arr[x]
+            arr[x] = arr[y]
+            arr[y] = temp
+        }
+
+        for (let i = 0; i < arr.length - 1; i += 2) {
+            swap(arr, i, i + 1)
+        }
+
+        return arr
+    }
+}
