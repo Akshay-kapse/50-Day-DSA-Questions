@@ -1,0 +1,18 @@
+// 🔸 Platform: GeeksforGeeks  
+// 🔸 Problem: Divisible by 13  
+// 🔹 Difficulty: Easy  
+// 🔗 Link: https://www.geeksforgeeks.org/check-if-a-number-is-divisible-by-13/  
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 4)  
+// 📅 Date: 2025-07-21  
+// 🧑‍💻 Language: JavaScript  
+
+class Solution {
+    divby13(s) {
+        let ans = 0
+        for (let i = 0; i < s.length; i++) {
+            let digit = Number(s[i])
+            ans = (ans * 10 + digit) % 13
+        }
+        return ans === 0
+    }
+}
