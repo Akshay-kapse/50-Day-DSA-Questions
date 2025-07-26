@@ -16,6 +16,8 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 3   | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/), [Kth Smallest Element in a BST](https://www.geeksforgeeks.org/problems/kth-smallest-element-in-bst/1), [Smallest Number](https://www.geeksforgeeks.org/problems/smallest-number5823/1) | Arrays, BST, Greedy         |
 | 4   | [Delete without Head Pointer](https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1), [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/), [Sort List](https://leetcode.com/problems/sort-list/) | Linked List, Recursion      |
 | 5   | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/), [Sort Array in Wave Form](https://www.geeksforgeeks.org/sort-array-wave-form-2/), [Check if Number is Divisible by 13](https://www.geeksforgeeks.org/check-if-a-number-is-divisible-by-13/) | Binary Search, Sorting, Number Theory |
+| 6   | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/), [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/), [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Arrays, Strings, Binary Search |
+
 
 
 ## 📌 Platforms Used
