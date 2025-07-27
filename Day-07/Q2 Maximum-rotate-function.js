@@ -1,3 +1,12 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 396. Rotate Function
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/rotate-function/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 6)
+// 📅 Date: 2025-07-27
+// 🧑‍💻 Language: JavaScript
+
+
 /**
  * @param {number[]} nums
  * @return {number}
