@@ -1,28 +1,29 @@
 // 🔸 Platform: LeetCode
-// 🔸 Problem: 202. Happy Number
+// 🔸 Problem: 1945. Sum of Digits of String After Convert
 // 🔹 Difficulty: Easy
-// 🔗 Link: https://leetcode.com/problems/happy-number/
+// 🔗 Link: https://leetcode.com/problems/sum-of-digits-of-string-after-convert/
 // 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 7)
 // 📅 Date: 2025-07-28
 // 🧑‍💻 Language: JavaScript
 
 /**
- * @param {number} n
- * @return {boolean}
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
  */
-var isHappy = function (n) {
-    let seen = new Set()
-
-    while (n !== 1 && !seen.has(n)) {
-        seen.add(n)
-        let sum = 0
-        while (n > 0) {
-            let digit = n % 10
-            sum += digit * digit
-            n = Math.floor(n / 10)
-        }
-        n = sum
+var getLucky = function (s, k) {
+    let str = ""
+    for (let i = 0; i < s.length; i++) {
+        str += (s[i].charCodeAt(0) - 96).toString()
     }
 
-    return n === 1
+    while (k-- > 0) {
+        let sum = 0
+        for (let i = 0; i < str.length; i++) {
+            sum += Number(str[i])
+        }
+        str = sum.toString()
+    }
+
+    return Number(str)
 };
