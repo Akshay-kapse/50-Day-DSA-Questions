@@ -17,6 +17,8 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 4   | [Delete without Head Pointer](https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1), [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/), [Sort List](https://leetcode.com/problems/sort-list/) | Linked List, Recursion      |
 | 5   | [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/), [Sort Array in Wave Form](https://www.geeksforgeeks.org/sort-array-wave-form-2/), [Check if Number is Divisible by 13](https://www.geeksforgeeks.org/check-if-a-number-is-divisible-by-13/) | Binary Search, Sorting, Number Theory |
 | 6   | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/), [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/), [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/) | Arrays, Strings, Binary Search |
+| 7   | [Nim Game](https://leetcode.com/problems/nim-game/), [Happy Number](https://leetcode.com/problems/happy-number/), [Majority Element II](https://leetcode.com/problems/majority-element-ii/) | Math, Hashing, Frequency |
+
 
 
 
