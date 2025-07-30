@@ -1,0 +1,42 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 5. Longest Palindromic Substring
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/longest-palindromic-substring/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 10)
+// 📅 Date: 2025-07-30
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function (s) {
+    if (s.length === 0) return ""
+
+    let result = s[0]
+
+    for (let i = 0; i < s.length; i++) {
+        let left = i
+        let right = i
+
+        while (left >= 0 && right < s.length && s.charAt(left) === s.charAt(right)) {
+            if ((right - left + 1) > result.length) {
+                result = s.substring(left, right + 1)
+            }
+            left--
+            right++
+        }
+
+        left = i
+        right = i + 1
+
+        while (left >= 0 && right < s.length && s.charAt(left) === s.charAt(right)) {
+            if ((right - left + 1) > result.length) {
+                result = s.substring(left, right + 1)
+            }
+            left--
+            right++
+        }
+    }
+    return result
+};
