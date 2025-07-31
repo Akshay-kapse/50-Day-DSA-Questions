@@ -1,0 +1,23 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 274. H-Index
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/h-index/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 10)
+// 📅 Date: 2025-07-30
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} citations
+ * @returns {number}
+ */
+class Solution {
+    hIndex(citations) {
+        citations.sort((a,b) => b-a)
+        for(let i=0; i<citations.length; i++){
+            if(citations[i] < i+1){
+                return i
+            }
+        }
+        return citations.length
+    }
+}
