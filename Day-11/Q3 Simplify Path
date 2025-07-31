@@ -1,0 +1,32 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 71. Simplify Path
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/simplify-path/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 10)
+// 📅 Date: 2025-07-30
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {string} path
+ * @return {string}
+ */
+var simplifyPath = function (path) {
+    let component = path.split("/")
+    let ans = []
+
+    for (let co of component) {
+        if (co === "" || co === ".") {
+            continue
+        }
+
+        if (co === "..") {
+            if (ans.length) {
+                ans.pop()
+            }
+        } else {
+            ans.push(co)
+        }
+    }
+
+    return "/" + ans.join("/")
+};
