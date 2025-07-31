@@ -1,0 +1,22 @@
+// 🔸 Platform: GeeksforGeeks
+// 🔸 Problem: First non-repeating character in a string
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://practice.geeksforgeeks.org/problems/non-repeating-character-1587115620
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 10)
+// 📅 Date: 2025-07-30
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {string} s
+ * @returns {string}
+ */
+class Solution {
+    nonRepeatingChar(s) {
+        let uique = [...s].filter((item, _, string) => {
+            return string.indexOf(item) === string.lastIndexOf(item)
+        })
+
+        if (uique.length >= 1) return uique[0]
+        return '$'
+    }
+}
