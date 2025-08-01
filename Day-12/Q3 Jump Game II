@@ -1,0 +1,27 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 45. Jump Game II
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/jump-game-ii/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 11)
+// 📅 Date: 2025-08-01
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var jump = function (nums) {
+    let fasted = 0
+    let currentEnd = 0
+    let jump = 0
+
+    for (let i = 0; i < nums.length - 1; i++) {
+        fasted = Math.max(fasted, i + nums[i])
+
+        if (i === currentEnd) {
+            jump++
+            currentEnd = fasted
+        }
+    }
+    return jump
+};
