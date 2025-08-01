@@ -1,0 +1,43 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 99. Recover Binary Search Tree
+// 🔹 Difficulty: Hard
+// 🔗 Link: https://leetcode.com/problems/recover-binary-search-tree/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 11)
+// 📅 Date: 2025-08-01
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {void} Do not return anything, modify root in-place instead.
+ */
+var recoverTree = function (root) {
+    let prev = null, first = null, second = null
+
+    function Inorder(node) {
+        if (!node) return
+
+        Inorder(node.left)
+
+        if (prev != null && prev.val > node.val) {
+            if (!first) first = prev
+            second = node
+        }
+
+        prev = node
+        Inorder(node.right)
+    }
+
+    Inorder(root)
+
+    if (first !== null && second !== null) {
+        [first.val, second.val] = [second.val, first.val];
+    }
+};
