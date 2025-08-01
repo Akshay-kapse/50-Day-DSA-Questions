@@ -1,0 +1,42 @@
+// 🔸 Platform: GeeksforGeeks
+// 🔸 Problem: Two elements whose sum is closest to given number
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://practice.geeksforgeeks.org/problems/two-numbers-with-sum-closest-to-target/1
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 13)
+// 📅 Date: 2025-08-03
+// 🧑‍💻 Language: JavaScript
+
+class Solution {
+    sumClosest(arr, target) {
+        if (arr.length < 2) return []
+        arr.sort((a, b) => a - b)
+        
+        let ans = [-1, -1]
+        let mindiff = Infinity
+        let targetdiff = -1
+        
+        let left = 0
+        let right = arr.length - 1
+        
+        while (left < right) {
+            let a = arr[left]
+            let b = arr[right]
+            let sum = a + b
+            let diff = Math.abs(sum - target)
+            let Tdiff = Math.abs(b - a)
+            
+            if (diff < mindiff || (diff === mindiff && Tdiff > targetdiff)) {
+                ans = [a, b]
+                mindiff = diff
+                targetdiff = Tdiff
+            }
+            
+            if (sum < target) {
+                left++
+            } else {
+                right--
+            }
+        }
+        return ans
+    }
+}
