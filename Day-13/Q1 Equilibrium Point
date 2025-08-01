@@ -1,0 +1,36 @@
+// 🔸 Platform: GeeksforGeeks
+// 🔸 Problem: Equilibrium Point
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 13)
+// 📅 Date: 2025-08-03
+// 🧑‍💻 Language: JavaScript
+
+// User function Template for javascript
+
+/**
+ * @param {number[]} arr
+ * @returns {number}
+ */
+
+class Solution {
+    // Function to find equilibrium point in the array.
+    findEquilibrium(arr) {
+        let rightSum = 0
+        let leftSum = 0
+        
+        for(let i = 0; i < arr.length; i++) {
+            leftSum += arr[i]
+        }
+        
+        for(let i = 0; i < arr.length; i++) {
+            leftSum -= arr[i]
+            if (leftSum === rightSum) {
+                return i
+            } else {
+                rightSum += arr[i]
+            }
+        }
+        return -1
+    }
+}
