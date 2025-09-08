@@ -1,0 +1,42 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 904. Fruit Into Baskets
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/fruit-into-baskets/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 14)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} fruits
+ * @return {number}
+ */
+var totalFruit = function (fruits) {
+    if (fruits.length <= 2) return fruits.length;
+
+    let prev1 = -1, prev2 = -1;
+    let prev2count = 0;
+    let currlen = 0;
+    let max = 0;
+
+    for (let i = 0; i < fruits.length; i++) {
+        let fruit = fruits[i];
+
+        if (fruit === prev1 || fruit === prev2) {
+            currlen++;
+        } else {
+            currlen = prev2count + 1;
+        }
+
+        if (fruit === prev2) {
+            prev2count++;
+        } else {
+            prev1 = prev2;
+            prev2 = fruit;
+            prev2count = 1;
+        }
+
+        max = Math.max(max, currlen);
+    }
+
+    return max;
+};
