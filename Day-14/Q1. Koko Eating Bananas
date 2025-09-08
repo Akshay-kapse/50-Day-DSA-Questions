@@ -1,0 +1,37 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 875. Koko Eating Bananas
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/koko-eating-bananas/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 14)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} piles
+ * @param {number} h
+ * @return {number}
+ */
+var minEatingSpeed = function (piles, h) {
+    let left = 1
+    let max = 0
+
+    for (let i = 0; i < piles.length; i++) {
+        max = Math.max(max, piles[i])
+    }
+
+    while (left < max) {
+        let mid = Math.floor((left + max) / 2)
+        let hour = 0
+
+        for (let pile of piles) {
+            hour += Math.ceil(pile / mid)
+        }
+
+        if (hour <= h) {
+            max = mid
+        } else {
+            left = mid + 1
+        }
+    }
+    return left
+};
