@@ -1,0 +1,26 @@
+// 🔸 Platform: Practice Problem
+// 🔸 Problem: Fruits into Baskets Variant (Placement)
+// 🔹 Difficulty: Medium
+// 🔗 Link: -- (Custom/Practice Problem)
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 14)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} fruits
+ * @param {number[]} baskets
+ * @return {number}
+ */
+var numOfUnplacedFruits = function (fruits, baskets) {
+    let ans = 0
+    for (let i = 0; i < fruits.length; i++) {
+        for (let j = 0; j < baskets.length; j++) {
+            if (fruits[i] <= baskets[j]) {
+                ans++
+                baskets[j] = -1
+                break
+            }
+        }
+    }
+    return fruits.length - ans
+};
