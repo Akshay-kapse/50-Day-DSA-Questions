@@ -1,0 +1,33 @@
+// 🔸 Platform: LeetCode
+// 🔸 Problem: 2563. Count the Number of Fair Pairs
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/count-the-number-of-fair-pairs/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 15)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} nums
+ * @param {number} lower
+ * @param {number} upper
+ * @return {number}
+ */
+var countFairPairs = function (nums, lower, upper) {
+    nums.sort((a, b) => a - b)
+
+    function PairCount(valueOfLimit) {
+        let left = 0, right = nums.length - 1, total = 0
+        while (left < right) {
+            let sum = nums[left] + nums[right]
+            if (sum <= valueOfLimit) {
+                total += (right - left)
+                left++
+            } else {
+                right--
+            }
+        }
+        return total
+    }
+
+    return PairCount(upper) - PairCount(lower - 1)
+};
