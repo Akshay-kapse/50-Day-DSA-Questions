@@ -1,0 +1,32 @@
+// 🔸 Platform: Practice Problem
+// 🔸 Problem: Number of Equal and Divisible Pairs
+// 🔹 Difficulty: Easy
+// 🔗 Link: -- (Custom/Practice Problem)
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 15)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var countPairs = function (nums, k) {
+    let countPair = 0
+    let left = 0
+    let right = nums.length - 1
+
+    while (left < right) {
+        if (nums[left] === nums[right] && (left * right) % k === 0) {
+            countPair++
+        }
+        if (left + 1 === right) {
+            left++
+            right = nums.length - 1
+        } else {
+            right--
+        }
+    }
+
+    return countPair
+};
