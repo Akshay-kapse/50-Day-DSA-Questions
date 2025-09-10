@@ -1,0 +1,26 @@
+// 🔸 Problem: 2749. Minimum Operations to Make the Integer Zero
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 15)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number} num1
+ * @param {number} num2
+ * @return {number}
+ */
+var makeTheIntegerZero = function (num1, num2) {
+    let CountOne = n => n.toString(2).replace(/0/g, "").length;
+
+    for (let i = 1; i <= 60; i++) {
+        let SubRes = num1 - num2 * i;
+
+        if (SubRes < i) return -1;
+
+        if (i >= CountOne(SubRes)) {
+            return i;
+        }
+    }
+    return -1;
+};
