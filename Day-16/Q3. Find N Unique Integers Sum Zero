@@ -1,0 +1,23 @@
+// 🔸 Problem: 1304. Find N Unique Integers Sum up to Zero
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 15)
+// 📅 Date: 2025-09-08
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+var sumZero = function (n) {
+    let ans = [];
+
+    for (let i = 1; i <= Math.floor(n / 2); i++) {
+        ans.push(i);
+        ans.push(-i);
+    }
+    if (n % 2 != 0) {
+        ans.push(0);
+    }
+    return ans;
+};
