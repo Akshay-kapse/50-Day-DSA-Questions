@@ -1,0 +1,29 @@
+// 🔸 Problem: 1493. Longest Subarray of 1’s After Deleting One Element
+// 🔹 Difficulty: Medium
+// 🔗 Link: https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 17)
+// 📅 Date: 2025-09-10
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var longestSubarray = function (nums) {
+    if (nums.length === 1) return 0;
+    let len = 0, MaxLen = 0, OneDel = 0, k = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 1) {
+            len++;
+        } else if (nums[i] !== 1 && OneDel === 0) {
+            OneDel++;
+            k = len;
+        } else if (OneDel !== 0) {
+            len = len - k;
+            k = len;
+        }
+        MaxLen = Math.max(len, MaxLen);
+    }
+    return OneDel === 0 ? MaxLen - 1 : MaxLen;
+};
