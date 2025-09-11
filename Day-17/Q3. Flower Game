@@ -1,0 +1,15 @@
+// 🔸 Problem: 3232. Find if Digit Game Can Be Won
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://leetcode.com/problems/find-if-digit-game-can-be-won/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 17)
+// 📅 Date: 2025-09-10
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number} n
+ * @param {number} m
+ * @return {number}
+ */
+var flowerGame = function (n, m) {
+    return Math.floor((n * m) / 2);
+};
