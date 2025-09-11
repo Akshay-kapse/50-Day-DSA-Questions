@@ -1,0 +1,27 @@
+// 🔸 Problem: 3127. Maximum Area of Rectangle With Diagonal
+// 🔹 Difficulty: Easy
+// 🔗 Link: https://leetcode.com/problems/maximum-area-of-rectangle-with-diagonal/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 17)
+// 📅 Date: 2025-09-10
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[][]} dimensions
+ * @return {number}
+ */
+var areaOfMaxDiagonal = function (dimensions) {
+    let MaxArea = 0, ans = 0;
+
+    for (let i = 0; i < dimensions.length; i++) {
+        let len = dimensions[i][0];
+        let wid = dimensions[i][1];
+
+        let currArea = len * len + wid * wid;
+
+        if (currArea > MaxArea || (currArea === MaxArea && len * wid > ans)) {
+            MaxArea = currArea;
+            ans = len * wid;
+        }
+    }
+    return ans;
+};
