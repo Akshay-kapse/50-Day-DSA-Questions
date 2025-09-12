@@ -1,0 +1,27 @@
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var sortVowels = function (s) {
+    let Vowels = [];
+
+    for (let vow of s) {
+        if ("AEIOUaeiou".includes(vow)) {
+            Vowels.push(vow);
+        }
+    }
+
+    Vowels.sort();
+    let result = '';
+    let VoIndex = 0;
+
+    for (let char of s) {
+        if ("AEIOUaeiou".includes(char)) {
+            result += Vowels[VoIndex++];
+        } else {
+            result += char;
+        }
+    }
+
+    return result;
+};
