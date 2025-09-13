@@ -1,0 +1,38 @@
+// 🔸 Problem: Find the Sum of Highest Frequency Vowel and Consonant
+// 🔹 Difficulty: Easy
+// 🔗 Custom Practice Problem
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 19)
+// 📅 Date: 2025-09-13
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxFreqSum = function (s) {
+    let VowArr = []
+    let ConArr = []
+
+    for (let i = 0; i < s.length; i++) {
+        if ("aeiou".includes(s[i])) {
+            VowArr.push(s[i])
+        } else {
+            ConArr.push(s[i])
+        }
+    }
+
+    if (VowArr.length === 0 && ConArr.length === 0) return 0;
+
+    const getMaxFreq = (arr) => {
+        if (arr.length === 0) return 0;
+        let MaxChar = arr.reduce((a, b, _, arr) =>
+            arr.filter(ch => ch === a).length >= arr.filter(ch => ch === b).length ? a : b
+        );
+        return arr.filter(ch => ch === MaxChar).length;
+    };
+
+    let MaxVow = getMaxFreq(VowArr);
+    let MaxCon = getMaxFreq(ConArr);
+
+    return MaxVow + MaxCon;
+};
