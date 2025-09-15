@@ -1,0 +1,30 @@
+// 🔸 Problem: Maximum Number of Words You Can Type
+// 🔹 Difficulty: Easy
+// 🔗 Source: https://leetcode.com/problems/maximum-number-of-words-you-can-type/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 21)
+// 📅 Date: 2025-09-13
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {string} text
+ * @param {string} brokenLetters
+ * @return {number}
+ */
+var canBeTypedWords = function (text, brokenLetters) {
+    let Broken = new Set(brokenLetters.split(""));
+    let UnBroken = 0;
+
+    for (let BT of text.split(" ")) {
+        let UnBro = true;
+        for (let ch of BT) {
+            if (Broken.has(ch)) {
+                UnBro = false;
+                break;
+            }
+        }
+        if (UnBro) {
+            UnBroken++;
+        }
+    }
+    return UnBroken;
+};
