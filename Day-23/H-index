@@ -1,0 +1,28 @@
+// 🔸 Problem: H-Index
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/h-index/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 22)
+// 📅 Date: 2025-09-17
+
+/**
+ * @param {number[]} citations
+ * @return {number}
+ */
+var hIndex = function (citations) {
+    // Step 1: Sort citations in descending order
+    citations.sort((a, b) => b - a);
+
+    // Step 2: Iterate and find cutoff point
+    for (let i = 0; i < citations.length; i++) {
+        if (citations[i] < i + 1) {
+            return i;
+        }
+    }
+
+    // Step 3: If all citations are >= index, return length
+    return citations.length;
+};
+
+// Example test cases
+console.log(hIndex([3, 0, 6, 1, 5])); // Output: 3
+console.log(hIndex([1,]()
