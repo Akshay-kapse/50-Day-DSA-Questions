@@ -1,0 +1,37 @@
+// 🔸 Problem: Replace Non-Coprimes in an Array
+// 🔹 Difficulty: Medium
+// 🔗 Custom Practice Problem
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge (Day 22)
+// 📅 Date: 2025-09-16
+// 🧑‍💻 Language: JavaScript
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var replaceNonCoprimes = function (nums) {
+    let stack = []
+
+    const gcp = (a, b) => {
+        while (b !== 0) {
+            let t = b
+            b = a % b
+            a = t
+        }
+        return a
+    }
+
+    for (let num of nums) {
+        while (stack.length > 0) {
+            let top = stack[stack.length - 1]
+            let g = gcp(top, num)
+            if (g === 1) {
+                break
+            }
+            stack.pop()
+            num = (top / g) * num
+        }
+        stack.push(num)
+    }
+    return stack
+};
