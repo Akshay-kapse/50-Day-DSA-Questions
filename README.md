@@ -28,6 +28,13 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 15 | [Largest 3-Same-Digit Number](Day-15/Q1%20Largest%203-Same-Digit%20Number.js), [Count the Number of Fair Pairs](Day-15/Q2%20Count%20the%20Number%20of%20Fair%20Pairs.js), [Number of Equal and Divisible Pairs](Day-15/Q3%20Number%20of%20Equal%20and%20Divisible%20Pairs.js) | Strings, Hashing, Math |
 | 16 | [Minimum Operations to Make Integer Zero](Day-16/Q1%20Minimum%20Operations%20to%20Make%20Integer%20Zero.js), [Get No Zero Integers](Day-16/Q2%20Get%20No%20Zero%20Integers.js), [Sum Zero](Day-16/Q3%20Sum%20Zero.js) | Math, Simulation |
 | 17 | [Longest Subarray of 1's After Deleting One Element](Day-17/Q1%20Longest%20Subarray.js), [Area of Maximum Diagonal](Day-17/Q2%20Area%20of%20Max%20Diagonal.js), [Flower Game](Day-17/Q3%20Flower%20Game.js) | Arrays, Geometry, Math |
+| 18 | [Sort Vowels in a String](Day-18/Q1%20Sort%20Vowels%20in%20a%20String.js), [Does Alice Win](Day-18/Q2%20Does%20Alice%20Win.js), [Get No Zero Integers](Day-18/Q3%20Get%20No%20Zero%20Integers.js) | Strings, Math, Simulation |
+| 19 | [Find Most Frequent Vowel and Consonant](Day-19/Q1%20Find%20Most%20Frequent%20Vowel%20and%20Consonant.js) | Strings, Frequency |
+| 20 | [Earliest Time to Finish One Task](Day-20/Earliest%20Time%20to%20Finish%20One%20Task.js) | Greedy, Sorting |
+| 21 | [Maximum Number of Words You Can Type](Day-21/Maximum%20Number%20of%20Words%20You%20Can%20Type.js) | Strings, Hashing |
+| 22 | [Replace Non-Coprimes in Array](Day-22/Replace%20Non-Coprimes%20in%20Array.js), [H-Index](Day-22/H-index.js) | Arrays, Sorting |
+| 23 | [H-Index](Day-23/H-index.js) | Arrays, Sorting |
+
 
 
 
