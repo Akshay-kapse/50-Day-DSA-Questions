@@ -1,0 +1,30 @@
+// 🔸 Problem: Isomorphic Strings
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/isomorphic-strings/description/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-18
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isIsomorphic = function (s, t) {
+    const CharOfS = {}
+    const CharOfT = {}
+
+    for (let i = 0; i < s.length; i++) {
+        if (!(s[i] in CharOfS)) {
+            CharOfS[s[i]] = i
+        }
+
+        if (!(t[i] in CharOfT)) {
+            CharOfT[t[i]] = i
+        }
+
+        if (CharOfS[s[i]] !== CharOfT[t[i]]) {
+            return false
+        }
+    }
+    return true
+};
