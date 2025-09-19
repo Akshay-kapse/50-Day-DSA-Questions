@@ -1,0 +1,32 @@
+// 🔸 Problem: Word Pattern
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/word-pattern/description
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-18
+
+/**
+ * @param {string} pattern
+ * @param {string} s
+ * @return {boolean}
+ */
+var wordPattern = function (pattern, s) {
+    const words = s.split(" ");
+    if (words.length !== pattern.length) return false;
+
+    const CharOfpattern = new Map();
+    const CharOfwords = new Map();
+
+    for (let i = 0; i < pattern.length; i++) {
+        if (!CharOfpattern.has(pattern[i])) {
+            CharOfpattern.set(pattern[i], i);
+        }
+        if (!CharOfwords.has(words[i])) {
+            CharOfwords.set(words[i], i);
+        }
+
+        if (CharOfpattern.get(pattern[i]) !== CharOfwords.get(words[i])) {
+            return false;
+        }
+    }
+    return true;
+};
