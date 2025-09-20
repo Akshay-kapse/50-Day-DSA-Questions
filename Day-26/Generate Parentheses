@@ -1,0 +1,30 @@
+// 🔸 Problem: Word Pattern
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/generate-parentheses/description/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-20
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis = function(n) {
+    let ans = []
+
+    function GP(s, left, right) {
+        if (s.length === 2 * n) {
+            ans.push(s)
+            return
+        }
+
+        if (left < n) {
+            GP(s + '(', left + 1, right)
+        }
+         if (left > right) {
+            GP(s +')', left, right + 1)
+        }
+    }
+
+    GP('', 0, 0)
+    return ans
+};
