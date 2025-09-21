@@ -1,0 +1,16 @@
+// 🔸 Problem: Word Pattern
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/reverse-bits/description
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-21
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var reverseBits = function (n) {
+    let bin =  n.toString(2).padStart(32,0)
+    let rev = bin.split("").reverse().join("")
+
+    return parseInt(rev,2)
+};
