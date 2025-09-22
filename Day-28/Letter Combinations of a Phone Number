@@ -1,0 +1,27 @@
+// 🔸 Problem: Isomorphic Strings
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/letter-combinations-of-a-phone-number/description
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-22
+
+/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinations = function (digits) {
+    if (digits.length === 0) return [];
+    let dig = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
+    let res = []
+    function Letter(index, temp) {
+        if (index === digits.length) {
+            res.push(temp)
+            return
+        }
+        let letter = dig[digits[index] - '0']
+        for (let lett of letter) {
+            Letter(index + 1, temp + lett)
+        }
+    }
+    Letter(0, "")
+    return res
+};
