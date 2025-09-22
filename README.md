@@ -34,6 +34,11 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 21 | [Maximum Number of Words You Can Type](Day-21/Maximum%20Number%20of%20Words%20You%20Can%20Type.js) | Strings, Hashing |
 | 22 | [Replace Non-Coprimes in Array](Day-22/Replace%20Non-Coprimes%20in%20Array.js), [H-Index](Day-22/H-index.js) | Arrays, Sorting |
 | 23 | [H-Index](Day-23/H-index.js) | Arrays, Sorting |
+| 24 | [Isomorphic Strings](Day-24/Isomorphic%20Strings.js) | Hash Map, String |
+| 25 | [Word Pattern](Day-25/Word%20Pattern.js) | Hash Map, String |
+| 26 | [Generate Parentheses](Day-26/Generate%20Parentheses.js) | Backtracking |
+| 27 | [Reverse Bits](Day-27/Reverse%20Bits.js) | Bit Manipulation |
+| 28 | [Letter Combinations of a Phone Number](Day-28/Letter%20Combinations%20of%20a%20Phone%20Number.js) | Backtracking, String |
 
 
 
