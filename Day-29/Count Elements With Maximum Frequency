@@ -1,0 +1,25 @@
+// 🔸 Problem: Count Elements With Maximum Frequency
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/count-elements-with-maximum-frequency/description
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-18
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxFrequencyElements = function (nums) {
+    let freq = new Map()
+    let MaxFre = 0
+
+    for (let num of nums) {
+        freq.set(num, (freq.get(num) || 0) + 1)
+        MaxFre = Math.max(MaxFre, freq.get(num))
+    }
+
+    let ans = 0
+    for (let val of freq.values()) {
+        if (MaxFre === val) ans += val
+    }
+    return ans
+};
