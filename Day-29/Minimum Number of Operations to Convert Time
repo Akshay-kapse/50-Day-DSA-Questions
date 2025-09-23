@@ -1,0 +1,41 @@
+// 🔸 Problem: Minimum Number of Operations to Convert Time
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/description/
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-18
+
+/**
+ * @param {string} current
+ * @param {string} correct
+ * @return {number}
+ */
+var convertTime = function (current, correct) {
+    let curr = current.split(":")
+    let cort = correct.split(":")
+
+    let minOfCurr = parseInt((curr[0] * 60)) + parseInt(curr[1])
+    let minOfCort = parseInt((cort[0] * 60)) + parseInt(cort[1])
+
+    let count = 0
+
+    while (minOfCurr != minOfCort) {
+        if ((minOfCort - minOfCurr) >= 60) {
+            minOfCurr = minOfCurr + 60
+            count++
+        }
+        else if ((minOfCort - minOfCurr) >= 15) {
+            minOfCurr = minOfCurr + 15
+            count++
+        }
+        else if ((minOfCort - minOfCurr) >= 5) {
+            minOfCurr = minOfCurr + 5
+            count++
+        }
+        else {
+            count += minOfCort - minOfCurr
+            break
+        }
+
+    }
+    return count
+};
