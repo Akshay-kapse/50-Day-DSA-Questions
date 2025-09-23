@@ -39,6 +39,8 @@ I'm solving **3+ DSA problems daily** for 50 days to strengthen my problem-solvi
 | 26 | [Generate Parentheses](Day-26/Generate%20Parentheses.js) | Backtracking |
 | 27 | [Reverse Bits](Day-27/Reverse%20Bits.js) | Bit Manipulation |
 | 28 | [Letter Combinations of a Phone Number](Day-28/Letter%20Combinations%20of%20a%20Phone%20Number.js) | Backtracking, String |
+| 29 | [Max Frequency Elements](Day-39/MaxFrequencyElements.js), [Convert Time](Day-39/ConvertTime.js) | Hash Map, Frequency, Greedy, Math |
+
 
 
 
