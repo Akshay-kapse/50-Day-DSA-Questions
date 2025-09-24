@@ -1,0 +1,27 @@
+// 🔸 Problem: Longest Increasing Subsequence
+// 🔹 Difficulty: Medium
+// 🔗 LeetCode: https://leetcode.com/problems/longest-increasing-subsequence/description
+// 🧠 Solved by: Akshay Kapse | 50-Day DSA Challenge 
+// 📅 Date: 2025-09-18
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function (nums) {
+    if (nums.length === 0) return 0
+    let n = nums.length
+    let maxLeng = 1
+    let dp = new Array(n).fill(1)
+
+
+    for (let i = 1; i < n; i++) {
+        for (let j = 0; j < i; j++) {
+            if (nums[i] > nums[j]) {
+                dp[i] = Math.max(dp[i], dp[j]+1)
+            }
+        }
+        maxLeng = Math.max(maxLeng, dp[i])
+    }
+    return maxLeng
+};
